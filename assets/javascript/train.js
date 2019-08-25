@@ -42,7 +42,7 @@ $("#submit-btn").on("click", function (event)
             
             var minutesToCompleteFrequency=frequency-reminder;
 
-            var nextTrain=currentTime.add(minutesToCompleteFrequency,"minutes").format("HH:mm");
+            var nextTrain=currentTime.add(minutesToCompleteFrequency,"minutes").format("h:mmA");
             return nextTrain
         }
         
@@ -98,5 +98,5 @@ tableInput(tName, tDestination, tFrequency, nextArrival, minutesAway)
 
 function tableInput(trainName, destination, frequency, nextArrival, minutesAway)
 {
-    $(".tBody").append('<tr><td>'+trainName+'</td><td>'+destination+'</td><td>'+frequency+'</td><td>'+nextArrival+'</td><td>'+minutesAway+'</td></tr>')
+    $(".tBody").append('<tr><td>'+trainName+'</td><td>'+destination+'</td><td>'+frequency+" mins"+'</td><td>'+nextArrival+'</td><td>'+minutesAway+" mins"+'</td></tr>')
 }
